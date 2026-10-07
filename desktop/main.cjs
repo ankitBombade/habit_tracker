@@ -47,7 +47,7 @@ app.on('window-all-closed', () => {
 // IPC Handlers
 ipcMain.handle('show-notification', (event, { title, body }) => {
   if (Notification.isSupported()) {
-    new Notification({ title, body, icon: path.join(__dirname, '../public/favicon.svg') }).show();
+    new Notification({ title, body, icon: path.join(__dirname, '../frontend/public/favicon.svg') }).show();
     return true;
   }
   return false;

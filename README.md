@@ -4,6 +4,30 @@
 
 ---
 
+## 📁 Project Structure
+
+```text
+habit_tracker/
+├── 📁 frontend/           # Web UI application (React + Vite + Tailwind + SQLite)
+│   ├── 📁 src/            # React source code (components, hooks, db, store, utils)
+│   │   ├── 📁 components/ # Categorized UI components (analytics, dashboard, habits, timer, etc.)
+│   │   ├── 📁 db/         # Local SQLite persistence repository & setup
+│   │   ├── 📁 store/      # Global state management with Zustand
+│   │   ├── 📁 types/      # TypeScript interfaces
+│   │   └── 📁 utils/      # Helper utilities & export logic
+│   ├── 📁 public/         # Static assets (favicons, icons)
+│   └── 📄 index.html      # React application entry HTML
+├── 📁 desktop/            # Electron Desktop Shell & Main Process
+│   ├── 📄 main.cjs        # Main process & native window management
+│   └── 📄 preload.js      # Secure IPC bridge
+├── 📄 package.json        # Dependencies & build scripts
+├── 📄 vite.config.ts      # Vite build configuration
+├── 📄 tailwind.config.js  # Tailwind styling system
+└── 📄 tsconfig.json       # TypeScript configuration
+```
+
+---
+
 ## ✨ Features
 
 - 🎯 **Habit Tracking**: Track daily habits, view streaks, and analyze completion rates.
@@ -35,8 +59,8 @@
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/ankitBombade/focus-forge.git
-   cd focus-forge
+   git clone https://github.com/ankitBombade/habit_tracker.git
+   cd habit_tracker
    ```
 
 2. **Install dependencies:**

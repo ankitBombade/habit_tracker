@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "productName": "FocusForge",
   "type": "module",
-  "main": "electron/main.cjs",
+  "main": "desktop/main.cjs",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -22,8 +22,8 @@
     },
     "files": [
       "dist/**/*",
-      "electron/**/*",
-      "public/**/*",
+      "desktop/**/*",
+      "frontend/public/**/*",
       "package.json"
     ],
     "win": {
@@ -35,7 +35,7 @@
           ]
         }
       ],
-      "icon": "public/icon.png"
+      "icon": "frontend/public/icon.png"
     },
     "nsis": {
       "oneClick": false,
