@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-[#09090B] text-zinc-100 font-sans antialiased overflow-hidden selection:bg-emerald-500/30 selection:text-emerald-200;
+  }
+}
+
+/* Custom Glassmorphism Utility Classes */
+.glass-panel {
+  background: rgba(24, 24, 27, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-panel-interactive {
+  background: rgba(24, 24, 27, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
+}
+
+.glass-panel-interactive:hover {
+  background: rgba(39, 39, 42, 0.75);
+  border-color: rgba(255, 255, 255, 0.16);
+  transform: translateY(-1px);
+}
+
+.glass-input {
+  background: rgba(9, 9, 11, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #FAFAFA;
+  transition: all 0.15s ease;
+}
+
+.glass-input:focus {
+  outline: none;
+  border-color: #10B981;
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.25);
+}
+
+/* Custom Obsidian Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(9, 9, 11, 0.8);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(63, 63, 70, 0.6);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(113, 113, 122, 0.8);
+}
+
+/* Flame Animations */
+@keyframes flameGlow {
+  0% {
+    filter: drop-shadow(0 0 6px rgba(249, 115, 22, 0.6));
+    transform: scale(1) rotate(-1deg);
+  }
+  50% {
+    filter: drop-shadow(0 0 14px rgba(234, 88, 12, 0.9));
+    transform: scale(1.06) rotate(1deg);
+  }
+  100% {
+    filter: drop-shadow(0 0 6px rgba(249, 115, 22, 0.6));
+    transform: scale(1) rotate(-1deg);
+  }
+}
+
+.flame-animated {
+  animation: flameGlow 2s ease-in-out infinite;
+}
